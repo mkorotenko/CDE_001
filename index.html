@@ -5,109 +5,26 @@
 	<title>Homecenter</title>
 	<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />-->
 	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
   <script data-main="js/config" src="js/require.js"></script>
 </head>
 <body>
   <script type="text/template" id="login-page-template">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
-    input:focus {
-      outline:none;
-    }
-    #logon {
-      width:320px;
-      padding:7px;
-      box-shadow:0px 4px 20px rgba(0, 0, 0, 0.3);
-      height:400px;
-      margin:auto;
-      position:relative;
-      top:100px;
-    }
-    #l-header {
-      border-style:solid;
-      border-color:rgba(0, 0, 0, 0.2);
-      border-left:none;
-      border-right:none;
-      border-top:none;
-      border-width:1px;
-      margin-top:2px;
-      padding:3px;
-    }
-    .l-text {
-      color:rgba(20, 0, 30, 0.6);
-      font-family:"Roboto";
-      font-size:23px;
-      position:relative;
-      left:20px;
-    }
-    .c-text {
-      color:rgba(100,100, 100, 0.6);
-      font-family:"Roboto";
-      font-size:15px;
-      position:relative;
-      left:25px;
-      width:100px;
-    }
-    #content {
-      width:320px;
-      margin:auto;
-      position:absolute;
-      left:-20px;
-      margin-top:40px;
-    }
-    .logon_input {
-          display: table;
-        margin: 0 auto;
-      color:rgba(100,140, 100, 0.6);
-      font-family:"Roboto";
-      font-size:15px;
-      position:relative;
-      top:-15px;
-      left:20px;
-      border-style:solid;
-      border-left:none;
-      border-right:none;
-      border-top:none;
-      border-width:1px;
-      width:170px;
-      margin:auto;
-      padding:6px;
-      margin-top:10px;
-    }
-    .logon_submit {
-          display: table;
-        margin: 0 auto;
-      color:rgba(100,140, 100, 0.6);
-      font-family:"Roboto";
-      font-size:15px;
-      position:relative;
-      top:-15px;
-      left:20px;
-      background-color:transparent;
-      border-color:rgba(100,140, 100, 0.6);
-      border-style:solid;
-      border-width:1px;
-      border-radius:30px;
-      width:150px;
-      padding:6px;
-      margin:auto;
-      margin-top:80px;
-      text-align:center;
-    }
-  </style>
-  <div id="logon">
-    <div id="l-header">
-      <p class="l-text">Login</p>
+    <div class="container">
+
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+        <input class="form-control" placeholder="Password" required="" type="password">
+        <label class="checkbox">
+          <input value="remember-me" type="checkbox"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
     </div>
-    <div id="content">
-      <input class="logon_input" type="text" value="Username"></input>
-    <br>
-      <input class="logon_input" type="password" value="Password"></input>
-      <input type="submit" class="logon_submit"></input>
-    </div>
-  </div>
   </script>
   
   <div id='page-container'></div>
