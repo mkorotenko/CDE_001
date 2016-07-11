@@ -10,6 +10,7 @@ define([
         '' : 'mainpage'
       },
       mainpage: function () {
+        app.openPage();
       },
       initiliaze: function () {}
     });

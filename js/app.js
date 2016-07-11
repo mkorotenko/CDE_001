@@ -29,17 +29,38 @@ define([
         initialize: function () { return this; },
         resize: function () { return this; },
         free: function () { return this; },
-        render: function () { return this; }
+        render: function () { 
+          this.$el.html(this.entityTemplate(this.model.attributes));
+          return this; 
+        }
     });
 
+
+    var LogonPage = PageViewBase.extend({
+        entityTemplate: _.template($('#login-page-template').html())
+    });
     //=====================APPLICATION MODEL=====================\\
     var Application = Backbone.Model.extend({
-        initialize: function () { return this; }
+        initialize: function () { 
+          return this; 
+        },
+        openPage: function() {
+          if(!this.get('account')) {
+            var logonPage = new LogonPage({
+              el: '#page-container',
+              model: this
+            });
+            logonPage.render();
+          }
+          return this;
+        }
     });
 
     //application instance
     var app = new Application();
-    app.set({}, { silent: true });
+    app.set({
+      'account': ''
+    }, { silent: true });
 
     return app;
 
