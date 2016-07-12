@@ -31,13 +31,24 @@ define([
         free: function () { return this; },
         render: function () { 
           this.$el.html(this.entityTemplate(this.model.attributes));
+          // this.setElement();
           return this; 
         }
     });
 
 
     var LogonPage = PageViewBase.extend({
-        entityTemplate: _.template($('#login-page-template').html())
+        entityTemplate: _.template($('#login-page-template').html()),
+        events: {
+          "change [type='email']": "loginChanged",
+          "change [type='password']": "passChanged",
+        },
+        loginChanged: function(event) {
+          this.model.set('account', $(event.currentTarget).val());
+        },
+        passChanged: function(event) {
+          this.model.set('password', $(event.currentTarget).val());
+        },
     });
     //=====================APPLICATION MODEL=====================\\
     var Application = Backbone.Model.extend({

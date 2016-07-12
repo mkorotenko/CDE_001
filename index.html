@@ -6,24 +6,22 @@
 	<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />-->
 	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet" />
+    <link href="css/signin.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" type="text/css">
   <script data-main="js/config" src="js/require.js"></script>
 </head>
 <body>
   <script type="text/template" id="login-page-template">
     <div class="container">
-
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="demo_form.asp" method="get">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email">
-        <input class="form-control" placeholder="Password" required="" type="password">
+        <input class="form-control" placeholder="Login" required="" name="UserName" autofocus="" type="text">
+        <input class="form-control" placeholder="Password" required="" name="Password" type="password">
         <label class="checkbox">
           <input value="remember-me" type="checkbox"> Remember me
         </label>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
     </div>
   </script>
   
